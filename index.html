@@ -1,259 +1,772 @@
 
-<html lang="pt-br">
-  <head>
-
-    <style>
-    /* Reset para garantir que o banner ocupe toda a largura */
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
-    }
-    
-    .banner-noticias {
-        background-color: #c22a1e;
-        color: white;
-        text-align: center;
-        padding: 15px 0;
-        width: 100vw;
-        max-width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-    }
-    
-    .banner-noticias h1 {
-        margin: 0;
-        font-size: 28px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
-</style>
-
-<div class="banner-noticias">
-    <h1>ÚLTIMAS NOTICIAS</h1>
-</div>
-    
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '635654032461043');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=635654032461043&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-    
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assets/css/com.css">
-
-    
-
-    <!-- Título da Página -->
-    <title>Protocolo Oculto Revelado - MCTD</title>
-    
-    <style type="text/css">
-      body {
-        color: #000000;
-        background-image: url("assets/img/bg.jpeg");
-        background-color: #ffffff;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-blend-mode: darken;
-      }
-    </style>
-
-  </head>
-  <body>
-    
-    <header class="py-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            
-
-            <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desabilitar Clique Direito</title>
-    <script>
-        // Desabilita o clique direito
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            alert('A visualização do código fonte foi desabilitada!');
-        });
+    <title>RSP Data Analysis - Consultoria em Análise de Dados</title>
+    <meta name="description" content="Especialistas em consultoria de análise de dados, Business Intelligence e Big Data. Desbloqueie o máximo potencial dos seus dados!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #fbbf24;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: #fbbf24; }
+            51%, 100% { border-color: transparent; }
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e1b4b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .data-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+            position: relative;
+            overflow: hidden;
+            perspective: 1500px; /* Definindo a perspectiva 3D para o efeito de profundidade */
+        }
 
-        // Tenta bloquear atalhos comuns de inspeção (Ctrl+U, Ctrl+Shift+I)
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || 
-                (e.shiftKey && (e.key === 'i' || e.key === 'I')))) {
-                e.preventDefault();
-                alert('Acesso ao código fonte bloqueado!');
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float-random 8s infinite ease-in-out;
+            transform-origin: center center; /* Garantir que a rotação seja no centro */
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float-random {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) translateZ(0px);
             }
-        });
-    </script>
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(45deg) translateZ(50px);
+            }
+            50% {
+                transform: translateY(-60px) translateX(-10px) rotate(90deg) translateZ(100px);
+            }
+            75% {
+                transform: translateY(-30px) translateX(-20px) rotate(135deg) translateZ(150px);
+            }
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .revolution-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e1b4b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #fbbf24;
+        }
+        
+        .dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-parent:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+        }
 
-  
-    <style>
-        /* Impede seleção de texto (opcional) */
-        body {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #8f84d3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background-color: #FFFFFF;
+            color: #8f84d3;
+        }
+
+        .footer-social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #8f84d3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-social-icon:hover {
+            background-color: #FFFFFF;
+            color: #8f84d3;
         }
     </style>
 </head>
-<body>
-</body>
-</html>
-
-            <p><span id="peopleCount">300</span> pessoas de  <b><span id="address" style="color: #000000;"></span></b> estão assistindo esse vídeo</p>
-
-<!--SCRIPT GEOLOCALIZAÇÃO-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script>$.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city);
-}, "jsonp");
-</script>
-
-<!--FIM DO SCRIPT-->
-
-
-<!--SCRIPT AUMENTO DE PESSOAS-->
-<script>
-  // Função para aumentar o número a cada 30 segundos
-  function aumentarNumero() {
-    var peopleCountElement = document.getElementById('peopleCount');
-    var numeroAtual = parseInt(peopleCountElement.innerText, 10);
-
-    // Aumenta o número em 1
-    var novoNumero = numeroAtual + 6;
-
-    // Atualiza o conteúdo do elemento
-    peopleCountElement.innerText = novoNumero;
-
-    // Chama a função novamente após 30 segundos (30000 milissegundos)
-    setTimeout(aumentarNumero, 15000);
-  }
-
-  // Inicia o aumento quando a página carrega
-  aumentarNumero();
-</script>
-
-<!--FIM DO SCRIPT-->
-
-            <!-- Headline -->
-            <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ventas</title>
-    <!-- Link para carregar a fonte Exo 2 -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilo global para garantir que a fonte Exo 2 seja usada */
-        body {
-            font-family: 'Exo 2', sans-serif !important;
-        }
-    </style>
-</head>
-<body>
-    <h3 class="my-4" style="font-family: 'Exo 2', sans-serif;">
-        <b> Nuevos Estudios Comprueban la Eficacia de un Reciente 
-            <span style="color: green;"> Descubrimiento Científico </span> 
-            Capaz de Reducir los Niveles de Glucosa en la Sangre 
-            <span style="color: red;">  </span>  
-            <i> </i>
-        </b>
-    </h3>
-</body>
-</html>
-
-            <!-- VSL -->
-            <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/8dg80yk1zs.js" async type="module"></script><style>wistia-player[media-id='8dg80yk1zs']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8dg80yk1zs/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="8dg80yk1zs" aspect="1.7777777777777777"></wistia-player>            <!-- Botão -->
-            <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.hotmart.com/T97507260M?checkoutMode=10" class="a-btn" style="text-decoration: none;">
-                <span class="span-btn">¡QUIERO OBTENER ACCESO AL PROTOCOLO NATURAL AHORA CON UN 80% DE DESCUENTO!</span>
-                <span class="span-btn2">(atención: cupos limitados)</span>
-              </a>
+<body class="smooth-scroll">
+    <!-- Header Fixo -->
+    <header class="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20sem%20nome%20%2858%29-ljkXhV6qWiYF1QvffrBd40zKV3jDTJ.png" alt="RSP Data Analysis" class="h-12 w-auto">
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link text-white">Início</a>
+                    <a href="#quem-somos" class="nav-link text-white">Quem Somos</a>
+                    <div class="relative dropdown-parent">
+                        <a href="#solucoes" class="nav-link text-white">Soluções</a>
+                        <div class="dropdown absolute top-full left-0 bg-gray-800 rounded-lg shadow-lg min-w-64 mt-2">
+                            <a href="#consultoria" class="block px-4 py-2 text-white hover:text-yellow-400 hover:bg-gray-700 rounded-t-lg">Consultoria em Análise de Dados</a>
+                            <a href="#dashboards" class="block px-4 py-2 text-white hover:text-yellow-400 hover:bg-gray-700">Desenvolvimento de Dashboards</a>
+                            <a href="#bigdata" class="block px-4 py-2 text-white hover:text-yellow-400 hover:bg-gray-700">Soluções em Big Data</a>
+                            <a href="#treinamento" class="block px-4 py-2 text-white hover:text-yellow-400 hover:bg-gray-700 rounded-b-lg">Treinamento e Capacitação</a>
+                        </div>
+                    </div>
+                    <a href="#contato" class="nav-link text-white">Contato</a>
+                </div>
+                
+                <!-- Redes Sociais -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://www.facebook.com/profile.php?id=61571033602651" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rspdataanalysis/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://wa.me/5531995780054" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+                
+                <!-- Menu Mobile -->
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-
-             
             
-           
-            <div class="image-bxJWMz6266408">
-<style>
-.image-bxJWMz6266408-element img {
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 0.25vh;
-margin-top: 1.75vh;
-max-width: 80%;
-border-radius: 0;
-border: none;
-}
-@media (max-width: 1200px) {
-.image-bxJWMz6266408-element img {
-max-width: 72%;
-}
-}
-@media (max-width: 600px) {
-.image-bxJWMz6266408-element img {
-max-width: 80%;
-margin-left:auto;margin-right:auto;
-}
-}
-</style>
-<div class="image-bxJWMz6266408-element">
-<img loading="lazy" src="https://media.atomicatpages.net/u/z7ZuvcwroBQsWxeGoXlNjqxuFEC3/Pictures/vwAGuW1103312.webp" alt="">
-</div>
-</div>
-
-            
-
-            
-
-            
-            <!-- Termos de Uso e Política de Privacidade -->
-            <div class="text-black mt-4"><a href="termos.html" class="text-black">Termos de Uso</a> <span style="color:#238af6;">| </span> <a href="privacidade.html" class="text-black">Política de Privacidade</a></div>
-          </div>
-        </div>
-      </div>
+            <!-- Menu Mobile Dropdown -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="pt-4 pb-2 space-y-2">
+                    <a href="#inicio" class="block text-white hover:text-yellow-400 py-2">Início</a>
+                    <a href="#quem-somos" class="block text-white hover:text-yellow-400 py-2">Quem Somos</a>
+                    <a href="#solucoes" class="block text-white hover:text-yellow-400 py-2">Soluções</a>
+                    <a href="#contato" class="block text-white hover:text-yellow-400 py-2">Contato</a>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="https://www.facebook.com/profile.php?id=61571033602651" target="_blank" rel="noopener noreferrer" class="text-white hover:text-yellow-400">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rspdataanalysis/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-yellow-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5531995780054" target="_blank" rel="noopener noreferrer" class="text-white hover:text-yellow-400">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 1935000); // temporização da Call to Action (em milissegundos)
-    </script>
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white z-10 relative">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        Desbloqueie o <span class="text-cyan-400">máximo potencial</span> dos seus dados!
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                        Oferecemos soluções em Análise de Dados, Business Intelligence e Big Data para empresas alcançarem resultados mais rápidos e eficientes.
+                    </p>
+                    <a href="#contato" class="btn-primary inline-block text-white font-semibold px-8 py-4 rounded-lg">
+                        Entre em contato
+                    </a>
+                </div>
+                <div class="relative z-10">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero%20section-5uHS1iMK3rNcQRfnwTKJIgXSIWxgNl.png" alt="Análise de Dados" class="hero-image w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="./assets/js/com.js"></script>
-  </body>
+    <!-- Seção de Frases Dinâmicas -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="typing-text" class="text-3xl md:text-4xl font-bold text-gray-800 typing-animation min-h-[120px] flex items-center justify-center">
+                    <!-- Texto será inserido via JavaScript -->
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Quem Somos -->
+    <section id="quem-somos" class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #111827 0%, #191a31 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-left">
+                    Conheça a <span class="text-cyan-400">RSPDataanalysis</span>
+                </h2>
+                <p class="text-lg leading-relaxed text-gray-200 mb-6">
+                    A RSPDataanalysis é uma consultoria especializada em dados e negócios, que acompanha empresas em sua Jornada de Dados para aumentar a confiabilidade, agilidade e inteligência na tomada de decisão. Atuamos com foco na redução de custos, otimização de processos e maior precisão no planejamento estratégico, atendendo empresas de diferentes segmentos com soluções sob medida em análise de dados, dashboards personalizados, Big Data e capacitação profissional.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-200">
+                    Mais do que alcançar resultados, nosso compromisso é com a transformação real e contínua dos nossos clientes. Ao longo dos anos, construímos uma cultura sólida, unindo nossa equipe e parceiros em torno de um propósito comum: crescer, evoluir e transformar negócios por meio do poder dos dados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção O que os Dados Têm a Dizer -->
+    <section class="data-bg py-20 relative">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                        O que os dados têm a <span class="text-cyan-400">dizer</span>?
+                    </h2>
+                    <p class="text-xl leading-relaxed text-gray-200">
+                        A Análise de Dados é essencial para uma empresa conquistar resultados melhores. Quem aposta em uma melhor gestão na análise de dados do seu negócio está melhor posicionada no mercado e alcançando seus objetivos.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/o%20que%20os%20dados%20tem%20a%20dizer-jlZAsXIc0GvHHvHUwjgWNPrgkYtCVu.png" alt="Dados em Ação" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="solucoes" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Nossos Serviços</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Oferecemos soluções completas em análise de dados para transformar informações em resultados concretos para seu negócio.
+                </p>
+            </div>
+            
+            <div class=""></div>
+        </div>
+    </section>
+
+    <!-- Seção Consultoria em Análise de Dados -->
+    <section id="consultoria" class="bg-gray-900 py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-cyan-400">Consultoria em Análise de Dados</h2>
+                    <p class="text-xl leading-relaxed text-gray-200 mb-6">
+                        A análise de dados precisa ser mais do que apenas números. Nossa consultoria transforma dados brutos em estratégias acionáveis, ajudando sua empresa a tomar decisões assertivas com base em informações precisas.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        Usamos técnicas avançadas de análise preditiva, visualização de dados e machine learning para fornecer insights que impactam diretamente sua performance operacional, financeira e de mercado. Conosco, sua empresa ganha uma verdadeira vantagem competitiva.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/consultoria%20em%20an%C3%A1lise%20de%20dados-IQy8ZXCA2Oqvaa06p3rJrlKWUqtD5a.png" alt="Consultoria em Análise de Dados" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Desenvolvimento de Dashboards -->
+    <section id="dashboards" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/desenvolvimento%20de%20dashboards-JUw5AM8HtrEC6TqcvTugnBsxyMUNLy.png" alt="Desenvolvimento de Dashboards" class="w-full h-auto">
+                </div>
+                <div class="text-gray-800">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-blue-600">Desenvolvimento de Dashboards Personalizados</h2>
+                    <p class="text-xl leading-relaxed text-gray-700 mb-6">
+                        Com nossos dashboards personalizados, você terá uma visão clara e em tempo real dos dados que realmente importam para o seu negócio. Desenvolvemos painéis interativos e visualmente intuitivos, proporcionando uma forma eficaz de monitorar indicadores de desempenho (KPIs) e métricas cruciais.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        Seja para acompanhar vendas, produtividade ou engajamento, nossos dashboards ajudam sua equipe a agir rapidamente e com base em dados, maximizando resultados e evitando surpresas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Soluções em Big Data -->
+    <section id="bigdata" class="bg-gray-900 py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-cyan-400">Soluções em Big Data</h2>
+                    <p class="text-xl leading-relaxed text-gray-200 mb-6">
+                        Nossas soluções de Big Data oferecem uma infraestrutura sólida para coletar, processar e analisar grandes volumes de dados. Através de ferramentas avançadas de armazenamento e análise, conseguimos extrair insights valiosos de diversas fontes de dados.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        Com isso, sua empresa pode aprimorar suas decisões estratégicas, otimizar processos e descobrir oportunidades ocultas para crescimento. Trabalhamos com os mais altos padrões de segurança e escalabilidade, garantindo soluções robustas e seguras para qualquer porte de negócio.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/solu%C3%A7%C3%B5es%20em%20big%20data-KgdkOv9RKB4lgYv6irKrT57bltboWh.png" alt="Soluções em Big Data" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Treinamento e Capacitação -->
+    <section id="treinamento" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/treinamento%20e%20capacita%C3%A7%C3%A3o-uCxlvhc9jZoRn394JXOMK3TChIJcFX.png" alt="Treinamento e Capacitação" class="w-full h-auto">
+                </div>
+                <div class="text-gray-800">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-blue-600">Treinamento e Capacitação</h2>
+                    <p class="text-xl leading-relaxed text-gray-700 mb-6">
+                        Investir na capacitação da sua equipe é essencial para maximizar os benefícios das soluções de dados que você implementa. Nossos programas de treinamento são adaptados às necessidades específicas do seu negócio e são desenhados para ensinar desde o básico até as técnicas mais avançadas em análise de dados, BI e Big Data.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        Garantimos que sua equipe esteja pronta para utilizar as ferramentas mais inovadoras de maneira eficiente, promovendo um ambiente mais ágil e inteligente dentro da sua empresa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Revolução Guiada por Dados -->
+    <section class="revolution-bg py-20 relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-left">
+                        Pronto para a <span class="text-cyan-400">revolução</span> guiada por dados?
+                    </h2>
+                    <p class="text-xl mb-8 text-gray-200 leading-relaxed text-left">
+                        Então, agende uma reunião conosco! Podemos conversar sobre as principais tendências da Análise de Dados e como sua empresa pode começar a conquistar os benefícios da maneira mais rápida.
+                    </p>
+                    <a href="#contato" class="btn-primary inline-block text-white font-semibold px-8 py-4 rounded-lg">
+                        Entre em contato
+                    </a>
+                </div>
+                <div class="relative">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pronto%20para%20a%20revolu%C3%A7%C3%A3o-NxS5Bgc9JUwwCMVCkD2wZ5DunmTS0h.png" alt="Revolução dos Dados" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Nossa Localização -->
+    <section class="py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Nossa Localização</h2>
+        </div>
+        
+        <div class="relative">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.8!2d-44.0!3d-20.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua%20Coronel%20Jo%C3%A3o%20Gomes%2C%2013%2C%20Santo%20Ant%C3%B4nio%2C%20Conselheiro%20Lafaiete%20-%20MG%2C%2036401-126!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                width="100%" 
+                height="500" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://maps.google.com/?q=Rua+Coronel+João+Gomes,+13,+Santo+Antônio,+Conselheiro+Lafaiete,+MG" 
+               target="_blank" 
+               class="absolute top-4 left-4 bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg shadow-lg transition-colors border border-blue-200">
+                Ver mapa ampliado
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Formulário de Contato -->
+    <section id="contato" class="hero-bg py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="mb-8">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%2001-HaUaE0FHQAGsHPzh2N6MjGrXHQ3FCo.png" alt="RSP Data Analysis" class="h-16 w-auto mb-6">
+                    </div>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        Transforme sua gestão de dados sem os custos e a complexidade da infraestrutura. Foque no que realmente importa para o seu negócio e deixe conosco a análise e interpretação dos dados. Nossa consultoria especializada garante que você tome decisões informadas e estratégicas, sem se preocupar com a implementação ou manutenção de tecnologias.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-cyan-400"></i>
+                            <span>(31) 99578-0054</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-cyan-400"></i>
+                            <span>contato@rspdataanalysis.com.br</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Fale conosco</h3>
+                    <p class="text-gray-200 mb-6">Agende sua reunião preenchendo o formulário abaixo</p>
+                    
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+                        <div class="space-y-4">
+                            <input type="text" name="nome" placeholder="Seu nome" required 
+                                   class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
+                            
+                            <input type="email" name="email" placeholder="Seu e-mail" required 
+                                   class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
+                            
+                            <input type="tel" name="telefone" placeholder="Seu telefone" required 
+                                   class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
+                            
+                            <textarea name="mensagem" rows="4" placeholder="Sua mensagem" 
+                                      class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent"></textarea>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LogoRSPDAtaAnalisys%20%281%29-hYeJX2o0hgiqPZDqkW3u1fs0DVQYlj.png" alt="RSP Data Analysis" class="h-12 w-auto mb-4">
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Concentre-se somente no que importa, e deixe o restante com a gente.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.facebook.com/profile.php?id=61571033602651" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+                           <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rspdataanalysis/" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+                           <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5531995780054" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+                           <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+               
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-cyan-400">Empresa</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#quem-somos" class="text-gray-400 hover:text-white transition-colors">Quem Somos</a></li>
+                        <li><a href="#solucoes" class="text-gray-400 hover:text-white transition-colors">Soluções</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+               
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-cyan-400">Serviços</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#consultoria" class="text-gray-400 hover:text-white transition-colors">Consultoria em Análise de Dados</a></li>
+                        <li><a href="#dashboards" class="text-gray-400 hover:text-white transition-colors">Desenvolvimento de Dashboards Personalizados</a></li>
+                        <li><a href="#bigdata" class="text-gray-400 hover:text-white transition-colors">Soluções em Big Data</a></li>
+                        <li><a href="#treinamento" class="text-gray-400 hover:text-white transition-colors">Treinamento e Capacitação</a></li>
+                    </ul>
+                </div>
+               
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-cyan-400">Contato</h3>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-map-marker-alt text-cyan-400 mt-1"></i>
+                            <div>
+                                <p>Rua Coronel João Gomes, 13</p>
+                                <p>Santo Antônio</p>
+                                <p>Conselheiro Lafaiete, MG</p>
+                                <p>CEP 36401-126</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-cyan-400"></i>
+                            <p>contato@rspdataanalysis.com.br</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-cyan-400"></i>
+                            <p>(31) 99578-0054</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 RSP Data Analysis. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5531995780054" target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full px-6 py-3 shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+        <i class="fab fa-whatsapp text-xl"></i>
+        <i class="fas fa-chevron-right text-sm"></i>
+    </a>
+
+    <script>
+        // Menu Mobile Toggle
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Smooth Scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    const headerHeight = 80;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth",
+                    });
+                }
+            });
+        });
+
+        // Animação de Digitação
+        const phrases = [
+            "Diminua seus custos com análise de dados.",
+            "Foque nos negócios com análise de dados.",
+            "Tenha vantagem competitiva com análise de dados.",
+            "Seus processos mais rápidos com análise de dados.",
+            "Obtenha melhores resultados com análise de dados.",
+        ];
+
+        let currentPhraseIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+
+        function typeWriter() {
+            const typingElement = document.getElementById("typing-text");
+            const currentPhrase = phrases[currentPhraseIndex];
+
+            if (!isDeleting) {
+                // Digitando
+                typingElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+
+                if (currentCharIndex === currentPhrase.length) {
+                    // Pausa no final da frase
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeWriter();
+                    }, 2000);
+                    return;
+                }
+            } else {
+                // Apagando
+                typingElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                    setTimeout(typeWriter, 500);
+                    return;
+                }
+            }
+
+            setTimeout(typeWriter, isDeleting ? 50 : typingSpeed);
+        }
+
+        // Animação de entrada dos elementos quando ficam visíveis
+        function animateOnScroll() {
+            const elements = document.querySelectorAll(".service-card");
+
+            elements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add("animate");
+                }
+            });
+        }
+
+        // Executar animação no scroll
+        window.addEventListener("scroll", animateOnScroll);
+
+        // Validação do formulário
+        document.getElementById("contact-form").addEventListener("submit", (e) => {
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const checkbox = document.getElementById("terms").checked;
+
+            if (!nome || !email || !telefone || !checkbox) {
+                e.preventDefault();
+                alert("Por favor, preencha todos os campos obrigatórios e aceite os termos.");
+                return false;
+            }
+
+            // Validação básica de email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert("Por favor, insira um e-mail válido.");
+                return false;
+            }
+
+            // Se chegou até aqui, o formulário é válido
+            alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+        });
+
+        // Destacar link ativo no menu baseado na seção visível
+        window.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+            let current = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("text-yellow-400");
+                link.classList.add("text-white");
+
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.remove("text-white");
+                    link.classList.add("text-yellow-400");
+                }
+            });
+        });
+
+        // Inicializar animações quando a página carregar
+        document.addEventListener("DOMContentLoaded", () => {
+            // Iniciar animação de digitação
+            setTimeout(typeWriter, 1000);
+            
+            // Executar animação inicial dos cards
+            animateOnScroll();
+        });
+    </script>
+</body>
 </html>
